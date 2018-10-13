@@ -13,6 +13,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# pry
+gem 'pry-rails'
+
 # haml
 gem 'haml'
 gem 'haml-rails'
@@ -21,7 +24,7 @@ gem 'erb2haml'
 # for pagenate
 gem 'kaminari'
 
-# images
+# image uploader
 gem 'carrierwave', '~> 1.1'
 gem 'mini_magick'
 
@@ -29,11 +32,21 @@ gem 'mini_magick'
 gem 'i18n'
 gem 'enum_help'
 
-# bootstrap
+# bootstrap4
 gem 'bootstrap'
 gem 'jquery-rails'
 
+# write schema for model
+gem 'annotate'
+
+# user model
 gem 'devise'
+
+# search
+gem 'ransack'
+
+# write article
+gem 'summernote-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

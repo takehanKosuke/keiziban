@@ -13,10 +13,14 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       ## Rememberable
       t.datetime :remember_created_at
+
+
+      # add kosuke kawano
       t.string :name, null: false
       t.string :image
-
-      t.boolean :is_ban, default: true
+      t.integer :sex, null: false
+      t.integer :roll, default: 0, null:false
+      t.boolean :is_ban, default: true, null: false
 
 
       ## Trackable

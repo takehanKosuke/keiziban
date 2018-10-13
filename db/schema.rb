@@ -12,21 +12,23 @@
 
 ActiveRecord::Schema.define(version: 2018_10_11_134201) do
 
+  create_table "article_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image", null: false
+    t.integer "article_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "contents"
-    t.integer "category_id"
+    t.string "title", null: false
+    t.string "contents", null: false
+    t.integer "status", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "favorite_article", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "favorite_articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "article_id", null: false
     t.datetime "created_at", null: false
@@ -41,7 +43,9 @@ ActiveRecord::Schema.define(version: 2018_10_11_134201) do
     t.datetime "remember_created_at"
     t.string "name", null: false
     t.string "image"
-    t.boolean "is_ban", default: true
+    t.integer "sex", null: false
+    t.integer "roll", default: 0, null: false
+    t.boolean "is_ban", default: true, null: false
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

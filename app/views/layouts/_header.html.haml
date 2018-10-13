@@ -1,25 +1,23 @@
 %nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
   .container
-    %a.navbar-brand{:href => "index.html"} Start Bootstrap
+    %a.navbar-brand{:href => "index.html"} KEIZIBAN
     %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
       Menu
       %i.fas.fa-bars
     #navbarResponsive.collapse.navbar-collapse
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          %a.nav-link{:href => "index.html"} Home
-        %li.nav-item
-          %a.nav-link{:href => "about.html"} About
-        %li.nav-item
-          %a.nav-link{:href => "post.html"} Sample Post
-        %li.nav-item
-          %a.nav-link{:href => "contact.html"} Contact
-/ Page Header
-%header.masthead{:style => "background-image: url('/template_assets/img/home-bg.jpg')"}
-  .overlay
-  .container
-    .row
-      .col-lg-8.col-md-10.mx-auto
-        .site-heading
-          %h1 Clean Blog
-          %span.subheading A Blog Theme by Start Bootstrap
+      - if user_signed_in?
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            =link_to 'home', root_path
+          %li.nav-item
+            =link_to 'マイページ', user_path(current_user.id)
+          %li.nav-item
+            =link_to '投稿', new_article_path(current_user.id)
+      -else
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            =link_to 'home', root_path
+          %li.nav-item
+            =link_to 'ログイン', new_user_session_path
+          %li.nav-item
+            =link_to '新規登録', new_user_registration_path

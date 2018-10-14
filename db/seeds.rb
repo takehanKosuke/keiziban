@@ -1,7 +1,54 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+user_articles = [
+  {
+    user: {
+      email: 'test1@test.com',
+      password: '111111',
+      name: 'kosuke',
+      sex: '1',
+      image:'/assets/user1.jpg',
+      role: 1
+    },
+    articles: {
+      title: 'test1 article'
+      contents: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
+      article_images_attributes: [
+        {
+          image: '/assets/article1.jpg'
+        },
+        {
+          image: '/assets/article2.jpg'
+        }
+      ]
+    }
+  },
+  {
+    user: {
+      email: 'test2@test.com',
+      password: '111111',
+      name: 'yuuta',
+      sex: '1',
+      image:'/assets/user2.jpg',
+      role: 1
+    },
+    articles: {
+      title: 'test2 article'
+      contents: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
+      article_images_attributes: [
+        {
+          image: '/assets/article3.jpg'
+        },
+        {
+          image: '/assets/article4.jpg'
+        }
+      ]
+    }
+  }
+]
+
+puts 'Create users and articles...'
+user_articles.each do |instance|
+  user = User.create!(instance[:user])
+  puts "Create a user #{user.name}"
+  host = user.create_article!(instance[:article])
+  puts "Create a article"
+end

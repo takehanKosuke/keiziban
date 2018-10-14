@@ -22,4 +22,7 @@ class Article < ActiveRecord::Base
 
 
   enum status: {open: 0, close: 1, edit: 2}
+
+  scope :open, -> { where(status: 1) }
+
 end

@@ -4,12 +4,11 @@ user_articles = [
       email: 'test1@test.com',
       password: '111111',
       name: 'kosuke',
-      sex: '1',
       image:'/assets/user1.jpg',
       role: 1
     },
     articles: {
-      title: 'test1 article'
+      title: 'test1 article',
       contents: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
       article_images_attributes: [
         {
@@ -26,12 +25,11 @@ user_articles = [
       email: 'test2@test.com',
       password: '111111',
       name: 'yuuta',
-      sex: '1',
       image:'/assets/user2.jpg',
       role: 1
     },
     articles: {
-      title: 'test2 article'
+      title: 'test2 article',
       contents: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
       article_images_attributes: [
         {

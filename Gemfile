@@ -66,3 +66,42 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+# pry
+gem 'pry-rails'
+
+# haml
+gem 'haml'
+gem 'haml-rails'
+gem 'erb2haml'
+
+# for pagenate
+gem 'kaminari'
+
+# image uploader
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick'
+
+# enum
+gem 'i18n'
+gem 'enum_help'
+
+# bootstrap4
+gem 'bootstrap'
+gem 'jquery-rails'
+
+# write schema for model
+gem 'annotate'
+
+# user model
+gem 'devise'
+
+# search
+gem 'ransack'
+
+# write article
+gem 'summernote-rails'
+
+#output the ER  diagram
+gem 'rails-erd'

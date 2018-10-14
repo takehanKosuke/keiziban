@@ -9,10 +9,10 @@
         %ul.navbar-nav.ml-auto
           %li.nav-item
             =link_to 'home', root_path
-          %li.nav-item
-            =link_to 'マイページ', user_path(current_user.id)
-          %li.nav-item
-            =link_to '投稿', new_article_path(current_user.id)
+          -# %li.nav-item
+          -#   =link_to 'マイページ', user_path(current_user.id)
+          -# %li.nav-item
+          -#   =link_to '投稿', new_article_path(current_user.id)
       -else
         %ul.navbar-nav.ml-auto
           %li.nav-item

@@ -19,6 +19,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :image, null: false
       t.boolean :is_ban, default: false, null: false
       t.integer :role, default: 1, null: false
+      t.text :my_profile
 
 
       ## Trackable

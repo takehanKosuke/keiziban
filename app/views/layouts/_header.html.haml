@@ -5,19 +5,19 @@
       Menu
       %i.fas.fa-bars
     #navbarResponsive.collapse.navbar-collapse
-      -# - if user_signed_in?
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          =link_to 'home', root_path
-        -# %li.nav-item
-        -#   =link_to 'マイページ', user_path(current_user.id)
-        -# %li.nav-item
-        -#   =link_to '投稿', new_article_path(current_user.id)
-      -# -else
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
-          =link_to 'home', root_path
-        -# %li.nav-item
-        -#   =link_to 'ログイン', new_user_session_path
-        -# %li.nav-item
-        -#   =link_to '新規登録', new_user_registration_path
+      - if user_signed_in?
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            =link_to 'home', root_path
+          -# %li.nav-item
+          -#   =link_to 'マイページ', user_path(current_user.id)
+          -# %li.nav-item
+          -#   =link_to '投稿', new_article_path(current_user.id)
+      -else
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            =link_to 'home', root_path
+          %li.nav-item
+            =link_to 'ログイン', new_user_session_path
+          %li.nav-item
+            =link_to '新規登録', new_user_registration_path

@@ -10,5 +10,5 @@ class User < ApplicationRecord
 
   enum role:{admin: 0, nomal: 1}
 
-  # mount_uploader :image, ImagesUploader
+  mount_uploader :image, ImageUploader
 end

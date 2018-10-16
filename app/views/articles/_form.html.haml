@@ -1,6 +1,6 @@
 = form_for(@article) do |form|
   .field.m-5
     = form.label :text
-    = form.text_area :contents, 'data-provider': :summernote
+    = form.text_area :content, 'data-provider': :summernote
     .actions
       = form.submit

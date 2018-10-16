@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @article.article_images.build
   end
 
   def create

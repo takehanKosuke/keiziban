@@ -1,6 +1,6 @@
 %nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
   .container
-    %a.navbar-brand{:href => "index.html"} KEIZIBAN
+    = link_to 'KEIZIBAN', root_path, class: 'navbar-brand'
     %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
       Menu
       %i.fas.fa-bars
@@ -11,8 +11,8 @@
             =link_to 'home', root_path
           -# %li.nav-item
           -#   =link_to 'マイページ', user_path(current_user.id)
-          %li.nav-item
-            =link_to '投稿する', new_article_path
+          -# %li.nav-item
+          -#   =link_to '投稿する', new_article_path
           %li.nav-item
             =link_to 'ログアウト', destroy_user_session_path, method: :delete
       -else

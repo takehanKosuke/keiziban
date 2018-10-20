@@ -1,7 +1,9 @@
 .fake-header
 .container
-  .row
-    .col-lg-8.col-md-10.mx-auto
-      .cheam-name= @user.name
-      = image_tag @user.image_url(:md)
-      .profile= @user.my_profile
+  .row.mt-5
+    .col-3
+      = render 'layouts/left_content'
+    .col-9
+      #v-pills-tabContent.tab-content
+        = render 'profile'
+        = render 'article', {user: @user}

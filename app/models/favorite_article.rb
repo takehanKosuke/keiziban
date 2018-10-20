@@ -9,8 +9,8 @@
 #  updated_at :datetime         not null
 #
 
-class FavoriteArticle < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :article
-
-end
+# class FavoriteArticle < ActiveRecord::Base
+#   belongs_to :user
+#   belongs_to :article
+#
+# end

@@ -1,0 +1,7 @@
+%br
+.row
+  .col-sm-4
+    = image_tag article.image_url(:square_md), style: 'width: 100%;'
+  .col-sm-8
+    %h3= article.title
+    %p= article.content

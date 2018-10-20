@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 
   has_many :articles
-  has_many :articles, through: :favorite_articles
+  # has_many :articles, through: :favorite_articles
 
   enum role:{admin: 0, nomal: 1}
 

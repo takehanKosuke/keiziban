@@ -27,3 +27,5 @@
 /config/master.key
 
 /secret_file.rb
+
+/public/uploads

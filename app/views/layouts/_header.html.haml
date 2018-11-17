@@ -11,8 +11,8 @@
             =link_to 'home', root_path
           %li.nav-item
             =link_to 'マイページ', user_path(current_user.id)
-          -# %li.nav-item
-          -#   =link_to '投稿する', new_article_path
+          %li.nav-item
+            =link_to '投稿する', new_article_path
           %li.nav-item
             =link_to 'ログアウト', destroy_user_session_path, method: :delete
       -else

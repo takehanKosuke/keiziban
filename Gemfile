@@ -46,6 +46,10 @@ gem 'ransack'
 # write article
 gem 'summernote-rails'
 
+gem 'twitter'
+
+#Secret production cord
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

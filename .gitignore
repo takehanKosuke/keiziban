@@ -29,3 +29,6 @@
 /secret_file.rb
 
 /public/uploads
+
+
+/.env

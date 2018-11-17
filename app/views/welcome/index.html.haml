@@ -56,3 +56,6 @@
       .clearfix
         %a.btn.btn-info.float-right{:href => "#"} Older Posts →
 %hr/
+= form_tag tweet_path do
+  = text_area_tag :text
+  = submit_tag 'ツイートする'

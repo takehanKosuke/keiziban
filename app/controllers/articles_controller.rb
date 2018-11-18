@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :twitter_client, only: [:create]
+  # before_action :twitter_client, only: [:create]
 
   def show
   end
@@ -9,9 +9,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Course.new(article_params)
+    @article = Article.new(article_params)
     if @article.save
-       @client.update("#{@article.content}\r")
+       # @client.update("#{@article.content}\r")
       redirect_to root_path, success: "article created！"
     else
       redirect_to new_article_path
@@ -32,6 +32,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(
       :content,
       :title,
+      :user_id
     )
   end
 

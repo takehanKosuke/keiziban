@@ -1,6 +1,10 @@
-= form_for(@article) do |form|
+= form_for(@article) do |f|
+  =f.hidden_field :user_id, value: current_user.id
+  .row
+    .col-3= f.label :title
+    .col-9= f.text_field :title
   .field.m-5
-    = form.label :text
-    = form.text_area :content, 'data-provider': :summernote
+    = f.label :text
+    = f.text_area :content, 'data-provider': :summernote
     .actions
-      = form.submit
+      = f.submit

@@ -4,7 +4,7 @@ class Init < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :image
       t.text :content
-      t.integer :status, null: false
+      t.integer :status, null: false, default: 0
 
       t.integer :user_id, null: false
       t.timestamps
